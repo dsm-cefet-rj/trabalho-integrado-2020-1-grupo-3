@@ -24,6 +24,7 @@ function AdicionaBebida(){
     const [value1, setValue1] = useState("")
     const [value2, setValue2] = useState("")
 
+
     const handleChange1 = e => setValue1(e.target.value1)
     const handleChange2 = e => setValue2(e.target.value2)
 

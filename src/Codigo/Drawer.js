@@ -26,16 +26,7 @@ const Drawer = props => {
       icon: <InboxIcon />,
       onClick: () => history.push("/")
     },
-    {
-      text: "Refeições",
-      icon: <MailIcon />,
-      onClick: () => history.push("/about")
-    },
-    {
-      text: "Eventos",
-      icon: <MailIcon />,
-      onClick: () => history.push("/contact")
-    }
+  
   ];
   return (
     <MUIDrawer variant="permanent" className={classes.drawer}>
@@ -53,5 +44,6 @@ const Drawer = props => {
     </MUIDrawer>
   );
 };
+
 
 export default withRouter(Drawer);

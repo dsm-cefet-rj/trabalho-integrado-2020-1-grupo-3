@@ -1,8 +1,8 @@
+import React from 'react'
 import { ListItem, List, ListItemText, Button }from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
-import CancelarPedido from './UH-11'
-import EditarPedido from './UH-12'
-import { withRouter } from "react-router-dom"
+import CancelarPedido from './CancelarPedido'
+import EditarPedido from './EditarPedido'
 
 const UseStyles = makeStyles(theme => ({
     menu:{
@@ -25,7 +25,7 @@ const UseStyles = makeStyles(theme => ({
     }
 }))
 
-function MeusPedidos(){
+const MeusPedidos = props =>{
     const classes = UseStyles()
 
     return(

@@ -1,4 +1,4 @@
-import AdicionaBebida from "./UH-09"
+import AdicionaBebida from "./AdicionaBebida"
 import Button from "@material-ui/core/Button"
 
 function FazPedido(){
@@ -6,7 +6,7 @@ function FazPedido(){
     return(
         <div>
         <AdicionaBebida></AdicionaBebida>
-
+        
         <Button>Solicitar</Button>
 
         <Button>Limpar</Button>
