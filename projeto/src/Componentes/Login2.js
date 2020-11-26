@@ -52,11 +52,11 @@ class Login extends Component {
       let errors = {};
       let isValid = true;
   
-      if (!dados["cpf"]) {
+      if (!dados["cpf"] || dados["cpf"].length < 14) {
         isValid = false;
         errors["cpf"] = "Por favor informe o CPF";
       }
-  
+
       if (!dados["senha"]) {
         isValid = false;
         errors["senha"] = "Por favor informe a senha";
