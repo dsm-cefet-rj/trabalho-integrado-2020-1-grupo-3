@@ -32,7 +32,7 @@ class MudaSenha extends React.Component {
         input["confirm_password"] = "";
         this.setState({input:input});
   
-        alert('Demo Form is submited');
+        alert('Senha mudada com sucesso!');
     }
   }
   
