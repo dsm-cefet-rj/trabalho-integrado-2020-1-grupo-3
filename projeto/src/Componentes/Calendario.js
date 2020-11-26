@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
  
+
 function Calendario() {
 
   const [value, onChange] = useState(new Date());
@@ -11,6 +12,7 @@ function Calendario() {
         onChange={onChange}
         value={value}
       />
+      {value.toString()}
     </div>
   );
 }

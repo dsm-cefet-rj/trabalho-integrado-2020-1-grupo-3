@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { cpfMask } from './mask'
+import {withRouter} from 'react-router-dom'
 
 class Login extends Component{
     constructor(){
@@ -19,10 +20,14 @@ class Login extends Component{
 
       }
 
+      nextPath(path) {
+         this.props.history.push(path);
+      }
+
     render(){
         return(
             <form>
-                <label> CPF </label> <br />
+                <label> CPF </label>
                 <input type = "text"
                     maxLength='14'
                     placeholder = "Insira seu CPF" 
@@ -30,14 +35,14 @@ class Login extends Component{
                     name = "cpf"
                     onChange = {this.handleLogin}/>
                 <br />
-                <label> Senha </label><br />
+                <label> Senha </label>
                 <input type = "password"
                     placeholder = "Insira sua senha" 
                     value= {this.state.senha}
                     name = "senha"
                     onChange = {this.handleLogin}/>
                 <br />
-                <button>Login</button>
+                <button onClick= {()=> this.nextPath("/menu")}>Login</button>
 
             </form>
         )

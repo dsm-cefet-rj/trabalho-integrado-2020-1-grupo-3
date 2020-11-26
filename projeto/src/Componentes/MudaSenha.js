@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
   
-class MudaSenha extends React.Component {
+class MudaSenha extends Component {
     constructor() {
     super();
     this.state = {
