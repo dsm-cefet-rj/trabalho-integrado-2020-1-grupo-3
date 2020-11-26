@@ -10,7 +10,7 @@ import AdicionaRefeicao from "./Componentes/AdicionaRefeicao";
 import ConsultaEventos from "./Componentes/ConsultaEventos";
 import PedidoEnvia from "./Componentes/PedidoEnvia";
 import RecebePedido from "./Componentes/RecebePedido";
-import Login from "./Componentes/Login";
+import Login from "./Componentes/Login2";
 import Calendario from './Componentes/Calendario'
 import MudaSenha from './Componentes/MudaSenha'
 import Menu from './Componentes/Menu'
