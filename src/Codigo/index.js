@@ -4,10 +4,9 @@ import { BrowserRouter as Router } from "react-router-dom"
 import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
-import Login from './login';
-import FazPedido from './FazPedido'
+import Login from './Login';
 import MeusPedidos from './MeusPedidos'
-import AdicionaRefeicao from './Gerencia_Refeicao'
+import AdicionaRefeicao from './AdicionaRefeicao'
 import CancelaPedido from './CancelarPedido'
 
 ReactDOM.render(  
@@ -16,7 +15,7 @@ ReactDOM.render(
       <App/>
     </Router>  
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'),
+  );
 
 reportWebVitals();

@@ -13,7 +13,7 @@ import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles({
   drawer: {
-    width: "190px"
+    width: "300px"
   }
 });
 
@@ -21,12 +21,73 @@ const Drawer = props => {
   const { history } = props;
   const classes = useStyles();
   const itemsList = [
+
+
     {
-      text: "Pedidos",
+      text: "Login",
       icon: <InboxIcon />,
       onClick: () => history.push("/")
     },
-  
+
+    {
+      text: "Menu",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/menu")
+    },
+
+    {
+      text: "Muda Senha",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/mudasenha")
+    },
+
+    {
+      text: "Meus pedidos",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/meuspedidos")
+    },
+
+    {
+      text: "Fazer Pedido",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/pedidoenvia")
+    },
+    
+    {
+      text: "Calendário de Eventos",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/eventos")
+    },
+
+
+
+    // ADMIN visualiza pedidos
+    {
+      text: "Entregas",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/Grecebepedido")
+    }
+
+
+/*
+    { // É papel do ADMIN adicionar novas bebidas e refeicoes
+      text: "Adicionar Refeição",
+      icon: <MailIcon />,
+      onClick: () => history.push("/adicionarefeicao")
+    },
+    {
+      text: "Adicionar Bebida",
+      icon: <MailIcon />,
+      onClick: () => history.push("/adicionabebida")
+    },
+
+    {
+      text: "Recebe Pedido",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/recebepedido")
+    },
+*/
+
   ];
   return (
     <MUIDrawer variant="permanent" className={classes.drawer}>
@@ -45,5 +106,39 @@ const Drawer = props => {
   );
 };
 
-
 export default withRouter(Drawer);
+
+
+
+ /*{
+      text: "Meus Pedidos",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/"),
+    },
+
+    {
+      text: "Novo Pedido",
+      icon: <InboxIcon/>,
+      OnClick: () => history.push("/fazpedido"),
+    },
+
+    {
+      text: "Recebe Pedido",
+      icon: <InboxIcon/>,
+      OnClick: () => history.push("/recebepedido"),
+    },
+  
+
+    {
+      text: "AdicionaBebida",
+      icon: <InboxIcon/>,
+      OnClick: () => history.push("/adicionabebida"),
+    },
+
+    {
+      text: "Adiciona Refeicao",
+      icon: <InboxIcon/>,
+      OnClick: () => history.push("/adicionarefeicao"),
+    }
+  
+  ];*/

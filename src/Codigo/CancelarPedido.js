@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-function CancelarPedido(){
+const CancelarPedido = props =>{
 
     
         const [anchorEl,setAnchorE1] = React.useState(null)

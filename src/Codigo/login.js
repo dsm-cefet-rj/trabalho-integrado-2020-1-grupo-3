@@ -1,32 +1,52 @@
-import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import TextField from '@material-ui/core/TextField';
+import React, {Component} from 'react'
+import { cpfMask } from './mask'
+import {withRouter} from 'react-router-dom'
 
+class Login extends Component{
+    constructor(){
+        super()
+        this.state={
+            cpf: "",
+            senha: ""
+        }
+        this.handleLogin = this.handleLogin.bind(this)
+    }
 
-function Login(){
+    handleLogin(event){ //sempre gera um evento automaticamente em forms
+        const {name, value, type} = event.target
+        type === "text" ?
+        this.setState({ [name] : cpfMask(value) } ) :
+        this.setState({ [name] : value})
 
+      }
 
-   
-    return(
-        <div>
-        <h5> Usuário: </h5>
-        <form noValidate autoComplete="off">
-            <TextField id="standard-basic" />
-         </form>
-        
-         <h5> Senha: </h5>
-        <form noValidate autoComplete="off">
-            <TextField id="standard-basic" />
-         </form>
-         
-         <Button aria-controls="simple-menu" aria-haspopup="true">
-            <h4>Login</h4>
-         </Button>
+      nextPath(path) {
+         this.props.history.push(path);
+      }
 
-         </div>
-    )
+    render(){
+        return(
+            <form>
+                <label> CPF </label>
+                <input type = "text"
+                    maxLength='14'
+                    placeholder = "Insira seu CPF" 
+                    value= {this.state.cpf}
+                    name = "cpf"
+                    onChange = {this.handleLogin}/>
+                <br />
+                <label> Senha </label>
+                <input type = "password"
+                    placeholder = "Insira sua senha" 
+                    value= {this.state.senha}
+                    name = "senha"
+                    onChange = {this.handleLogin}/>
+                <br />
+                <button onClick= {()=> this.nextPath("/menu")}>Login</button>
 
- }
+            </form>
+        )
+    }
+}
 
-  export default Login;
+export default Login
