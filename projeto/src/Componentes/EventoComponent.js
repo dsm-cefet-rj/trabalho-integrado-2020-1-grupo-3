@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Collapsible from 'react-collapsible';
 
-class eventoComponent extends Component{
+class EventoComponent extends Component{
 
     render(){
         let infoData = [
@@ -22,4 +22,4 @@ class eventoComponent extends Component{
         
 }
 
-export default eventoComponent
+export default EventoComponent

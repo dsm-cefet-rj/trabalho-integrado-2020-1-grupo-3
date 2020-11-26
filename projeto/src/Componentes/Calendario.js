@@ -11,7 +11,6 @@ function Calendario() {
         onChange={onChange}
         value={value}
       />
-      {value.toString()}
     </div>
   );
 }
