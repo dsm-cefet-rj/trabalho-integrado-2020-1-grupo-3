@@ -12,10 +12,9 @@ class eventoComponent extends Component{
         infoData = JSON.stringify(infoData).replaceAll('","', ' ').replace('["', '').replace('"]', '')
         return(
                 <div>
-                    <Collapsible 
-                    trigger= {infoData} >
-                        <h3>{this.props.evento.local}</h3>
-                        <h3>{this.props.evento.descricao}</h3>
+                    <Collapsible trigger= {infoData}>
+                        <h3>Local: {this.props.evento.local}</h3>
+                        <h3>Descrição: {this.props.evento.descricao}</h3>
                     </Collapsible>
                 </div>
             )

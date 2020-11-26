@@ -22,7 +22,7 @@ class Login extends Component{
     render(){
         return(
             <form>
-                <label> CPF </label>
+                <label> CPF </label> <br />
                 <input type = "text"
                     maxLength='14'
                     placeholder = "Insira seu CPF" 
@@ -30,7 +30,7 @@ class Login extends Component{
                     name = "cpf"
                     onChange = {this.handleLogin}/>
                 <br />
-                <label> Senha </label>
+                <label> Senha </label><br />
                 <input type = "password"
                     placeholder = "Insira sua senha" 
                     value= {this.state.senha}
