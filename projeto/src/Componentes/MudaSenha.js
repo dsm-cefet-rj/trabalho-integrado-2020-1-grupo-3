@@ -72,7 +72,7 @@ class MudaSenha extends React.Component {
         <form onSubmit={this.handleSubmit}>
   
           <div class="form-group">
-            <label for="password">Senha:</label>
+            <label for="password">Nova Senha: </label>
             <input 
               type="password" 
               name="password" 
@@ -86,7 +86,7 @@ class MudaSenha extends React.Component {
           </div>
   
           <div class="form-group">
-            <label for="password">Confirmar senha:</label>
+            <label for="password">Confirmar Senha: </label>
             <input 
               type="password" 
               name="confirm_password" 

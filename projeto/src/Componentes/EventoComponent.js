@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Collapsible from 'react-collapsible';
 
 class eventoComponent extends Component{
-    
+
     render(){
         let infoData = [
             this.props.evento.nome,
